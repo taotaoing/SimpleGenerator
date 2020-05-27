@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+<context id="Mysql" targetRuntime="MyBatis3">
+
+    <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+        <property name="mappers" value="tk.mybatis.mapper.common.Mapper" />
+        <property name="caseSensitive" value="false"/>
+    </plugin>
+    <plugin type="com.chrm.mybatis.generator.plugins.LombokPlugin">
+        <property name="hasLombok" value="true" />
+    </plugin>
+    <!-- 自动为entity生成swagger2文档-->
+    <plugin type="mybatis.generator.plugins.GeneratorSwagger2Doc">
+        <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel" />
+        <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty" />
+    </plugin>
+
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                    connectionURL="jdbc:mysql://rm-bp1xbbib29w251515bo.mysql.rds.aliyuncs.com:3306/hzcytest"
+                    userId="hzcytest"
+                    password="hzcytest123!">
+    </jdbcConnection>
+    <javaModelGenerator targetPackage="com.hzcytech.common.entity"
+                        targetProject="E:/hospital_server_springcloud/cyhospital-common/src/main/java"/>
+    <sqlMapGenerator targetPackage="mapper"
+                     targetProject="E:/hospital_server_springcloud/cyhospital-core/src/main/resources"/>
+    <javaClientGenerator targetPackage="com.hzcytech.dao.mapper"
+                         targetProject="E:/hospital_server_springcloud/cyhospital-core/src/main/java" type="XMLMAPPER" />
+<!--    <sqlMapGenerator targetPackage="mapper"
+                     targetProject="E:\project/pterosaur-dao/src/main/resources"/>
+    <javaClientGenerator targetPackage="com.hzcytech.dao.mapper"
+                         targetProject="E:\project/pterosaur-dao/src/main/java" type="XMLMAPPER" />-->
+    <table tableName="bus_consult_hospitalized">
+        <generatedKey column="id" sqlStatement="Mysql" />
+    </table>
+
+<!--    <jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+<!--                    connectionURL="jdbc:mysql://hzcy.f3322.net:3306/crawler"-->
+<!--                    userId="root"-->
+<!--                    password="root">-->
+<!--    </jdbcConnection>-->
+
+<!--    <javaModelGenerator targetPackage="com.hzcytech.common.model"-->
+<!--                        targetProject="d:/code/chengyi/pterosaur/pterosaur-common/src/main/java"/>-->
+
+<!--    <sqlMapGenerator targetPackage="mapper"-->
+<!--                     targetProject="d:/code/chengyi/pterosaur/pterosaur-dao/src/main/resources"/>-->
+
+<!--    <javaClientGenerator targetPackage="com.hzcytech.dao.mapper"-->
+<!--                         targetProject="d:/code/chengyi/pterosaur/pterosaur-dao/src/main/java" type="XMLMAPPER" />-->
+
+<!--    <table tableName="yc_drug">-->
+<!--        <generatedKey column="id" sqlStatement="Mysql" />-->
+<!--    </table>-->
+<!--    <table tableName="yc_drug_info">-->
+<!--        <generatedKey column="id" sqlStatement="Mysql" />-->
+<!--    </table>-->
+
+</context>
+
+</generatorConfiguration>
