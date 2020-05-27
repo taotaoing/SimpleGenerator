@@ -4,7 +4,7 @@ import ${entityUrl}.${entityName};
 import ${mapperUrl}.${entityName}Mapper;
 import ${daoUrl}.${entityName}Dao;
 import com.github.pagehelper.PageHelper;
-import com.hzcytech.common.page.PageList;
+import com.simple.generator.common.PageList;
 import org.springframework.stereotype.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.Date;

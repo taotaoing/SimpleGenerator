@@ -3,7 +3,7 @@ package ${serviceImplUrl};
 import ${entityUrl}.${entityName};
 import ${daoUrl}.${entityName}Dao;
 import ${serviceUrl}.${entityName}Service;
-import com.hzcytech.common.page.PageList;
+import com.simple.generator.common.PageList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Date;

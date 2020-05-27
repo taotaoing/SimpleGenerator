@@ -1,7 +1,7 @@
 package ${daoUrl};
 
 import ${entityUrl}.${entityName};
-import com.hzcytech.common.page.PageList;
+import com.simple.generator.common.PageList;
 import java.util.List;
 
 /**   

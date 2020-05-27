@@ -22,9 +22,9 @@
     </plugin>
 
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                    connectionURL="jdbc:mysql://rm-bp1xbbib29w251515bo.mysql.rds.aliyuncs.com:3306/hzcytest"
-                    userId="hzcytest"
-                    password="hzcytest123!">
+                    connectionURL="jdbc:mysql://localhost:3306/mytest"
+                    userId="root"
+                    password="123456">
     </jdbcConnection>
     <javaModelGenerator targetPackage="com.hzcytech.common.entity"
                         targetProject="E:/hospital_server_springcloud/cyhospital-common/src/main/java"/>
@@ -32,10 +32,6 @@
                      targetProject="E:/hospital_server_springcloud/cyhospital-core/src/main/resources"/>
     <javaClientGenerator targetPackage="com.hzcytech.dao.mapper"
                          targetProject="E:/hospital_server_springcloud/cyhospital-core/src/main/java" type="XMLMAPPER" />
-<!--    <sqlMapGenerator targetPackage="mapper"
-                     targetProject="E:\project/pterosaur-dao/src/main/resources"/>
-    <javaClientGenerator targetPackage="com.hzcytech.dao.mapper"
-                         targetProject="E:\project/pterosaur-dao/src/main/java" type="XMLMAPPER" />-->
     <table tableName="bus_consult_hospitalized">
         <generatedKey column="id" sqlStatement="Mysql" />
     </table>
